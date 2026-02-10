@@ -3,26 +3,23 @@
 % --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}         % Matches Arial/Helvetica
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{setspace}       
-\setstretch{1.5}            % Exact 1.5 line spacing from your doc
+\setstretch{1.3} % Slightly tighter than 1.5 to fit high-impact content on one page
 
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{multicol}       % For the Core Competencies columns
-
-% --- Exact Font Size ---
+\usepackage{multicol}
 \usepackage{fontsize}
-\changefontsize[13pt]{10.5pt} 
+\changefontsize[12pt]{10.5pt} 
 
 % --- Section Formatting ---
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{12pt}{6pt}
-\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt}
+\titlespacing{\section}{0pt}{10pt}{4pt}
+\setlist[itemize]{leftmargin=0.15in, nosep, topsep=1pt}
 
 \begin{document}
 
@@ -30,62 +27,49 @@
 \begin{center}
     {\Huge \textbf{HARSHA YAMAZALA}} \\
     \vspace{2pt}
-    \small Platform (DevOps) Engineer | Cloud Architect | CKA \& AWS Professional \\
+    \textbf{Senior Platform Engineer | Cloud Architect | CKA \& AWS Professional} \\
     Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
     \href{https://github.com/yamazalaharsha}{github.com/yamazalaharsha}
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway (WAF). Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime and implementing rigorous FinOps strategies.
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Specialist in building Internal Developer Platforms (IDP) and securing enterprise-scale APIs through Azure APIM and Istio Service Mesh. Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime.
+
+\section{Elite Certifications}
+\begin{itemize}
+    \item \textbf{Kubernetes:} Certified Kubernetes Administrator (CKA)
+    \item \textbf{Cloud Professional:} AWS Solutions Architect -- Professional $|$ GCP Professional Cloud Architect
+    \item \textbf{Specialist:} Microsoft Certified: DevOps Engineer Expert $|$ HashiCorp Terraform Associate
+\end{itemize}
 
 \section{Core Competencies}
 \begin{multicols}{2}
 \begin{itemize}
-    \item Networking \& Ingress: Azure App Gateway, APIM, Istio
-    \item Cloud: Azure (AKS, Hub-Spoke), AWS (EKS), GCP
-    \item IaC: Terraform (Modules), Ansible, Helm
-    \item Orchestration: Kubernetes (CKA), Docker, GitOps
-    \item Security: mTLS, OAuth2, Azure Policy, CyberArk
-    \item Observability: Dynatrace, Splunk, Prometheus, ELK
+    \item \textbf{Networking:} Azure App Gateway, APIM, Istio, mTLS
+    \item \textbf{Infrastructure:} Terraform (Modules), Bicep, Ansible
+    \item \textbf{Platform:} AKS, EKS, GKE, OpenStack, Docker
+    \item \textbf{DevSecOps:} Azure Policy, OPA, CyberArk, OAuth2
 \end{itemize}
 \end{multicols}
-
-\section{Elite Certifications}
-\begin{itemize}
-    \item Certified Kubernetes Administrator (CKA)
-    \item AWS Certified Solutions Architect – Professional
-    \item Microsoft Certified: DevOps Engineer Expert
-    \item Google Cloud Certified: Professional Cloud Architect
-    \item HashiCorp Certified: Terraform Associate
-\end{itemize}
 
 \section{Professional Experience}
 
 \textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
 \textit{Platform (DevOps) Engineer} \hfill London, UK
 \begin{itemize}
-    \item Architected an Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
-    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust posture.
-    \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing.
-    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code,'' ensuring 100\% regulatory compliance.
+    \item \textbf{Internal Developer Platform:} Architected an IDP on AKS using Helm and Terraform, reducing environment bootstrap time by 50\% for 100+ developers.
+    \item \textbf{Zero-Trust Networking:} Engineered ingress traffic management using Azure WAF v2 and Istio, ensuring secure mTLS communication across microservices.
+    \item \textbf{FinOps:} Reduced monthly cloud consumption by 30\% through the implementation of Azure Spot Instances and Kubecost-driven rightsizing.
+    \item \textbf{Governance:} Delivered 100\% regulatory compliance by implementing "Policy-as-Code" via Azure Policy and OPA Gatekeepers.
 \end{itemize}
 
-\vspace{5pt}
+\vspace{6pt}
 
 \textbf{PEARSON INC} \hfill \textbf{Mar 2018 -- Feb 2019} \\
 \textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
 \begin{itemize}
-    \item Migrated on-premise VMWare workloads to AWS and improved SQL Server redundancy using Always On Availability Groups.
-    \item Defined and executed global Docker containerization strategy ensuring application portability.
-\end{itemize}
-
-\vspace{5pt}
-
-\textbf{CHARTER COMMUNICATIONS} \hfill \textbf{Jan 2016 -- Jan 2018} \\
-\textit{DevOps Engineer} \hfill St. Louis, USA
-\begin{itemize}
-    \item Integrated Terraform with Puppet to automate telecommunications services in OpenStack.
-    \item Optimized server deployment strategies to maintain +99.9\% availability for mission-critical portals.
+    \item Led the migration of legacy VMWare workloads to AWS, implementing Auto-Scaling groups that improved application availability by 40\%.
+    \item Established global containerization standards using Docker, ensuring seamless parity between Dev, QA, and Production environments.
 \end{itemize}
 
 \section{Education}
