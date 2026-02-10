@@ -3,11 +3,11 @@
 % --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
+\usepackage{helvet}         
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{setspace}       
-\setstretch{1.2} 
+\setstretch{1.4}            % Optimized for a clean, professional look
 
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -15,83 +15,101 @@
 \usepackage{multicol}
 \usepackage{fontawesome5}
 \usepackage{tabularx}
-\usepackage{xcolor}
 
-% --- Custom Colors ---
-\definecolor{primaryblue}{HTML}{0E5484} % Deep Professional Blue
-
-% --- Stable 10.5pt Font Size ---
+% --- Stable 10.5pt Font Size Setup ---
 \makeatletter
 \renewcommand\normalsize{%
    \@setfontsize\normalsize{10.5pt}{13pt}%
-   \abovedisplayskip 8\p@ \@plus2\p@ \@minus5\p@
+   \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+   \abovedisplayshortskip \z@ \@plus3\p@
+   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
    \belowdisplayskip \abovedisplayskip
    \let\@listi\@listI}
 \normalsize
 \makeatother
 
 % --- Section Formatting ---
-\titleformat{\section}{\large\bfseries\color{primaryblue}\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{12pt}{6pt}
-\setlist[itemize]{leftmargin=0.2in, nosep, topsep=1pt}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt}
 
 \begin{document}
 
-% --- Modern Header ---
+% --- Header ---
 \begin{center}
-    {\Huge \textbf{\color{primaryblue} HARSHA YAMAZALA}} \\
-    \vspace{4pt}
-    {\large \textbf{Senior Platform Engineer $|$ CKA $|$ AWS Solutions Architect Pro}} \\
-    \vspace{6pt}
+    {\Huge \textbf{HARSHA YAMAZALA}} \\
+    \vspace{2pt}
+    \textbf{Senior Platform Engineer | Cloud Architect | CKA \& AWS Professional} \\
+    \vspace{2pt}
     \small 
-    \faMapMarker* \ Reading, UK \ $|$ \ \faPhone \ +44 7417433417 \ $|$ \ \href{mailto:hyamazala@gmail.com}{\faEnvelope \ hyamazala@gmail.com} \\
-    \href{https://github.com/yamazalaharsha}{\faGithub \ github.com/yamazalaharsha} \ $|$ \ \href{https://www.linkedin.com/in/harsha437/}{\faLinkedin \ linkedin.com/in/harsha437}
+    Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{\faEnvelope \ hyamazala@gmail.com} \\
+    \href{https://github.com/yamazalaharsha}{\faGithub \ github.com/yamazalaharsha} $|$ 
+    \href{https://www.linkedin.com/in/harsha437/}{\faLinkedin \ linkedin.com/in/harsha437}
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) and securing enterprise-scale APIs through Azure APIM and Istio.
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Specialist in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio, and Azure Edge Networking. Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime and implementing rigorous FinOps strategies.
+
+\section{Core Competencies}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Networking: Azure App Gateway, APIM, Istio
+    \item Cloud: Azure (AKS, Hub-Spoke), AWS (EKS)
+    \item IaC: Terraform (Modules), Ansible, Helm
+    \item Orchestration: Kubernetes (CKA), Docker, GitOps
+    \item Security: mTLS, OAuth2, Azure Policy
+    \item Observability: Dynatrace, Splunk, Prometheus
+\end{itemize}
+\end{multicols}
 
 \section{Elite Certifications}
-\begin{center}
-\small
-\textbf{CKA} (Kubernetes) $|$ \textbf{AWS} Solutions Architect Pro $|$ \textbf{Azure} DevOps Expert $|$ \textbf{GCP} Cloud Architect $|$ \textbf{Terraform} Associate
-\end{center}
+\begin{itemize}
+    \item Certified Kubernetes Administrator (CKA)
+    \item AWS Certified Solutions Architect – Professional
+    \item Microsoft Certified: DevOps Engineer Expert
+    \item Google Cloud Certified: Professional Cloud Architect
+    \item HashiCorp Certified: Terraform Associate
+\end{itemize}
 
 \section{Professional Experience}
 
 \textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
-\textit{Senior Platform (DevOps) Engineer} \hfill \textit{London, UK}
+\textit{Platform (DevOps) Engineer} \hfill London, UK
 \begin{itemize}
-    \item \textbf{Internal Developer Platform:} Architected IDP on AKS using Helm/Terraform, reducing setup time by 50\%.
-    \item \textbf{Zero-Trust:} Engineered traffic management via Azure WAF v2 and Istio mTLS for secure microservices.
-    \item \textbf{FinOps:} Reduced monthly cloud spend by 30\% using Azure Spot Instances and Kubecost.
+    \item Architected an Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
+    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust posture.
+    \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing.
+    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for regulatory compliance.
 \end{itemize}
 
-\vspace{8pt}
+\vspace{5pt}
 
-\textbf{WESTERN UNION} \hfill \textbf{2019} \\
-\textit{DevOps Engineer} \hfill \textit{London, UK}
+\textbf{PEARSON INC} \hfill \textbf{Mar 2018 -- Feb 2019} \\
+\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
 \begin{itemize}
-    \item \textbf{Security Integration:} Uplifted platform compliance using CyberArk and CallSign for digital banking.
-    \item \textbf{Migration:} Automated application onboarding into Azure Cloud with secure secrets management.
-\end{itemize}
-
-\vspace{8pt}
-
-\textbf{PEARSON INC} \hfill \textbf{2018 -- 2019} \\
-\textit{Infrastructure Developer} \hfill \textit{Chennai, India}
-\begin{itemize}
-    \item \textbf{Cloud Migration:} Spearheaded on-premise VMWare migration to AWS with Always On redundancy.
+    \item Migrated on-premise VMWare workloads to AWS and improved SQL Server redundancy using Always On Availability Groups.
+    \item Defined and executed global Docker containerization strategy ensuring application portability.
 \end{itemize}
 
 \section{Technical Skills Matrix}
 \begin{center}
-\begin{tabularx}{\textwidth}{l X}
-\textbf{Cloud \& Platforms} & Azure (AKS, Hub-Spoke), AWS (EKS), GCP, OpenStack, Docker \\
-\textbf{Infrastructure} & Terraform, Ansible, Helm, GitHub Actions, Jenkins, Azure DevOps \\
-\textbf{Networking} & Istio Service Mesh, Azure APIM, App Gateway (WAF), mTLS \\
-\textbf{Security} & OPA, Azure Policy, CyberArk, OAuth2, Secret Management \\
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Category} & \textbf{Tools \& Technologies} \\
+\hline
+\textbf{Cloud} & Azure (AKS, Hub-Spoke, Key-vault), AWS (EKS, VPC, Lambda), GCP (GKE) \\
+\hline
+\textbf{IaC / CI-CD} & Terraform, Ansible, Helm, Jenkins, Azure DevOps, GitHub Actions \\
+\hline
+\textbf{Security} & mTLS, OAuth2, CyberArk, Azure Policy, Secret Management, WAF \\
+\hline
+\textbf{Observability} & Prometheus, Grafana, Dynatrace, Splunk, ELK Stack \\
+\hline
 \end{tabularx}
 \end{center}
+
+\section{Education}
+\textbf{Master of Science in IT Management} \hfill New York, USA \\
+Marist College
 
 \end{document}
