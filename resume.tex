@@ -3,11 +3,11 @@
 % --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}         
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{setspace}       
-\setstretch{1.4}            % Optimized for a clean, professional look
+\setstretch{1.4} 
 
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -16,13 +16,11 @@
 \usepackage{fontawesome5}
 \usepackage{tabularx}
 
-% --- Stable 10.5pt Font Size Setup ---
+% --- Stable 10.5pt Font Size ---
 \makeatletter
 \renewcommand\normalsize{%
    \@setfontsize\normalsize{10.5pt}{13pt}%
    \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
-   \abovedisplayshortskip \z@ \@plus3\p@
-   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
    \belowdisplayskip \abovedisplayskip
    \let\@listi\@listI}
 \normalsize
@@ -39,7 +37,7 @@
 \begin{center}
     {\Huge \textbf{HARSHA YAMAZALA}} \\
     \vspace{2pt}
-    \textbf{Senior Platform Engineer | Cloud Architect | CKA \& AWS Professional} \\
+    \textbf{Senior Platform Engineer $|$ CKA $|$ AWS Solutions Architect Pro} \\
     \vspace{2pt}
     \small 
     Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{\faEnvelope \ hyamazala@gmail.com} \\
@@ -48,47 +46,38 @@
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Specialist in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio, and Azure Edge Networking. Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime and implementing rigorous FinOps strategies.
+Senior Platform Engineer with 10+ years of experience architecting resilient, cloud-native Internal Developer Platforms (IDP) for Tier-1 financial institutions. Specialist in AKS and Azure DevOps, focusing on self-service ``Golden Path'' automation that reduces developer cognitive load by up to 50\%. Expert in embedding DevSecOps (Aqua, SAST/DAST) and GreenOps frameworks to align with 2026 regulatory and sustainability standards.
 
 \section{Core Competencies}
 \begin{multicols}{2}
 \begin{itemize}
-    \item Networking: Azure App Gateway, APIM, Istio
-    \item Cloud: Azure (AKS, Hub-Spoke), AWS (EKS)
-    \item IaC: Terraform (Modules), Ansible, Helm
-    \item Orchestration: Kubernetes (CKA), Docker, GitOps
-    \item Security: mTLS, OAuth2, Azure Policy
-    \item Observability: Dynatrace, Splunk, Prometheus
+    \item \textbf{Networking:} Azure WAF v2, APIM, Istio, F5, Atmos VPN
+    \item \textbf{Cloud:} Azure (Landing Zones, Hub-Spoke), AWS, GCP
+    \item \textbf{IaC:} Terraform (Modules), Azure Bicep, Ansible, Helm
+    \item \textbf{DevSecOps:} Aqua Security, SAST/DAST, Azure Policy
+    \item \textbf{Automation:} GitHub Actions, Azure Pipelines, GitOps
+    \item \textbf{FinOps:} KEDA Scale-to-Zero, Kubecost, GreenOps
 \end{itemize}
 \end{multicols}
-
-\section{Elite Certifications}
-\begin{itemize}
-    \item Certified Kubernetes Administrator (CKA)
-    \item AWS Certified Solutions Architect – Professional
-    \item Microsoft Certified: DevOps Engineer Expert
-    \item Google Cloud Certified: Professional Cloud Architect
-    \item HashiCorp Certified: Terraform Associate
-\end{itemize}
 
 \section{Professional Experience}
 
 \textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
-\textit{Platform (DevOps) Engineer} \hfill London, UK
+\textit{Senior Platform Engineer} \hfill London, UK
 \begin{itemize}
-    \item Architected an Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
-    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust posture.
-    \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing.
-    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for regulatory compliance.
+    \item \textbf{IDP \& Golden Paths:} Engineered self-service automation using Terraform and Azure DevOps, provisioning 80\% of infrastructure automatically and reducing developer friction.
+    \item \textbf{Zero-Trust Networking:} Orchestrated secure ingress via Checkpoint firewalls and Istio mTLS, maintaining 100\% compliance with 2026 financial regulations.
+    \item \textbf{FinOps \& GreenOps:} Achieved a 30\% reduction in cloud waste by implementing KEDA-based scale-to-zero configurations and proactive rightsizing of Docker clusters.
+    \item \textbf{Security Ingestion:} Integrated Aqua Container Security and automated SAST/DAST gating into CI/CD pipelines to mitigate critical vulnerabilities.
 \end{itemize}
 
 \vspace{5pt}
 
-\textbf{PEARSON INC} \hfill \textbf{Mar 2018 -- Feb 2019} \\
-\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
+\textbf{PEARSON INC} \hfill \textbf{2018 -- 2019} \\
+\textit{Senior Infrastructure Developer (DevOps)} \hfill Chennai, India
 \begin{itemize}
-    \item Migrated on-premise VMWare workloads to AWS and improved SQL Server redundancy using Always On Availability Groups.
-    \item Defined and executed global Docker containerization strategy ensuring application portability.
+    \item \textbf{Cloud Migration:} Led the migration of VMWare workloads to AWS, implementing SQL Server Always On Availability Groups for high-resilience database performance.
+    \item \textbf{Containerization:} Defined global Docker strategy, ensuring portability across hybrid environments.
 \end{itemize}
 
 \section{Technical Skills Matrix}
@@ -97,13 +86,13 @@ Strategic Platform Engineering Leader with 10 years of experience architecting r
 \hline
 \textbf{Category} & \textbf{Tools \& Technologies} \\
 \hline
-\textbf{Cloud} & Azure (AKS, Hub-Spoke, Key-vault), AWS (EKS, VPC, Lambda), GCP (GKE) \\
+\textbf{Platforms} & AKS, EKS, GKE, OpenStack, Docker, Unix/Linux \\
 \hline
-\textbf{IaC / CI-CD} & Terraform, Ansible, Helm, Jenkins, Azure DevOps, GitHub Actions \\
+\textbf{CI/CD/IaC} & Terraform, Bicep, Ansible, Helm, GitHub Actions, Azure Pipelines \\
 \hline
-\textbf{Security} & mTLS, OAuth2, CyberArk, Azure Policy, Secret Management, WAF \\
+\textbf{Security} & Aqua, Checkpoint, F5, mTLS, Azure Policy, CyberArk, Key Vault \\
 \hline
-\textbf{Observability} & Prometheus, Grafana, Dynatrace, Splunk, ELK Stack \\
+\textbf{Observability} & Dynatrace, Splunk, Prometheus, Grafana, ELK Stack \\
 \hline
 \end{tabularx}
 \end{center}
