@@ -8,6 +8,8 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # This allows the action to create the release
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
