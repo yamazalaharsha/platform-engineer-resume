@@ -1,90 +1,97 @@
 \documentclass[10pt,a4paper]{article}
 
-% --- Core Setup ---
+% --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=0.4in]{geometry}
-\usepackage{xcolor}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{setspace}       
+\setstretch{1.2} 
+
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{multicol}
 \usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{xcolor}
 
-% --- Color & Spacing ---
-\definecolor{sidebarcolor}{HTML}{F0F0F0}
-\setlist[itemize]{leftmargin=0.15in, nosep, topsep=2pt}
+% --- Custom Colors ---
+\definecolor{primaryblue}{HTML}{0E5484} % Deep Professional Blue
+
+% --- Stable 10.5pt Font Size ---
+\makeatletter
+\renewcommand\normalsize{%
+   \@setfontsize\normalsize{10.5pt}{13pt}%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus5\p@
+   \belowdisplayskip \abovedisplayskip
+   \let\@listi\@listI}
+\normalsize
+\makeatother
+
+% --- Section Formatting ---
+\titleformat{\section}{\large\bfseries\color{primaryblue}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\setlist[itemize]{leftmargin=0.2in, nosep, topsep=1pt}
 
 \begin{document}
 
-% --- Header Area ---
+% --- Modern Header ---
 \begin{center}
-    {\Huge \textbf{HARSHA YAMAZALA}} \\
-    \vspace{2pt}
-    \textbf{Senior Platform Engineer | CKA | AWS Solutions Architect Professional}
+    {\Huge \textbf{\color{primaryblue} HARSHA YAMAZALA}} \\
+    \vspace{4pt}
+    {\large \textbf{Senior Platform Engineer $|$ CKA $|$ AWS Solutions Architect Pro}} \\
+    \vspace{6pt}
+    \small 
+    \faMapMarker* \ Reading, UK \ $|$ \ \faPhone \ +44 7417433417 \ $|$ \ \href{mailto:hyamazala@gmail.com}{\faEnvelope \ hyamazala@gmail.com} \\
+    \href{https://github.com/yamazalaharsha}{\faGithub \ github.com/yamazalaharsha} \ $|$ \ \href{https://www.linkedin.com/in/harsha437/}{\faLinkedin \ linkedin.com/in/harsha437}
 \end{center}
 
-\vspace{10pt}
+\section{Executive Summary}
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) and securing enterprise-scale APIs through Azure APIM and Istio.
 
-% --- Sidebar Column (Left) ---
-\begin{minipage}[t]{0.3\textwidth}
-    \raggedright
-    \section*{Contact}
-    \small
-    \faPhone \ +44 7417433417 \\
-    \faEnvelope \ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
-    \faMapMarker \ Reading, UK \\
-    \faLinkedin \ \href{https://www.linkedin.com/in/harsha437/}{harsha437} \\
-    \faGithub \ \href{https://github.com/yamazalaharsha}{yamazalaharsha}
+\section{Elite Certifications}
+\begin{center}
+\small
+\textbf{CKA} (Kubernetes) $|$ \textbf{AWS} Solutions Architect Pro $|$ \textbf{Azure} DevOps Expert $|$ \textbf{GCP} Cloud Architect $|$ \textbf{Terraform} Associate
+\end{center}
 
-    \section*{Elite Skills}
-    \textbf{Cloud:} Azure, AWS, GCP \\
-    \textbf{Containers:} AKS, EKS, Docker \\
-    \textbf{IaC:} Terraform, Ansible, Helm \\
-    \textbf{Networking:} Istio, APIM, WAF \\
-    \textbf{Security:} mTLS, CyberArk, OPA
+\section{Professional Experience}
 
-    \section*{Education}
-    \textbf{MS in IT Management} \\
-    Marist College, NY \\
-    \textit{Dec 2015}
-\end{minipage}
-\hfill
-% --- Main Column (Right) ---
-\begin{minipage}[t]{0.65\textwidth}
-    \section*{Professional Summary}
-    \small Senior Platform Engineer with 10 years of experience. Expert in building Internal Developer Platforms (IDP) and securing cloud-native ecosystems for Tier-1 financial institutions like Lloyds and Western Union.
+\textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
+\textit{Senior Platform (DevOps) Engineer} \hfill \textit{London, UK}
+\begin{itemize}
+    \item \textbf{Internal Developer Platform:} Architected IDP on AKS using Helm/Terraform, reducing setup time by 50\%.
+    \item \textbf{Zero-Trust:} Engineered traffic management via Azure WAF v2 and Istio mTLS for secure microservices.
+    \item \textbf{FinOps:} Reduced monthly cloud spend by 30\% using Azure Spot Instances and Kubecost.
+\end{itemize}
 
-    \section*{Experience}
-    \textbf{Lloyds Banking Group} \hfill \textbf{2019 -- Present} \\
-    \textit{Platform (DevOps) Engineer}
-    \begin{itemize}
-        \item Architected IDP on AKS using Terraform/Helm.
-        \item Engineered Zero-Trust mTLS with Istio.
-        \item Reduced cloud spend by 30\% via FinOps.
-    \end{itemize}
+\vspace{8pt}
 
-    \vspace{8pt}
-    \textbf{Western Union} \hfill \textbf{Feb 2019 -- 2019} \\
-    \textit{DevOps Engineer}
-    \begin{itemize}
-        \item Integrated CyberArk/CallSign for security.
-        \item Managed global digital banking migrations.
-    \end{itemize}
+\textbf{WESTERN UNION} \hfill \textbf{2019} \\
+\textit{DevOps Engineer} \hfill \textit{London, UK}
+\begin{itemize}
+    \item \textbf{Security Integration:} Uplifted platform compliance using CyberArk and CallSign for digital banking.
+    \item \textbf{Migration:} Automated application onboarding into Azure Cloud with secure secrets management.
+\end{itemize}
 
-    \vspace{8pt}
-    \textbf{Pearson Inc} \hfill \textbf{2018 -- 2019} \\
-    \textit{Infrastructure Developer}
-    \begin{itemize}
-        \item Spearheaded VMWare to AWS migration.
-    \end{itemize}
+\vspace{8pt}
 
-    \vspace{8pt}
-    \textbf{CSC India Pvt Ltd} \hfill \textbf{2011 -- 2012} \\
-    \textit{Network Specialist}
-    \begin{itemize}
-        \item Managed Bluecoat proxy servers for UK/EU.
-    \end{itemize}
-\end{minipage}
+\textbf{PEARSON INC} \hfill \textbf{2018 -- 2019} \\
+\textit{Infrastructure Developer} \hfill \textit{Chennai, India}
+\begin{itemize}
+    \item \textbf{Cloud Migration:} Spearheaded on-premise VMWare migration to AWS with Always On redundancy.
+\end{itemize}
+
+\section{Technical Skills Matrix}
+\begin{center}
+\begin{tabularx}{\textwidth}{l X}
+\textbf{Cloud \& Platforms} & Azure (AKS, Hub-Spoke), AWS (EKS), GCP, OpenStack, Docker \\
+\textbf{Infrastructure} & Terraform, Ansible, Helm, GitHub Actions, Jenkins, Azure DevOps \\
+\textbf{Networking} & Istio Service Mesh, Azure APIM, App Gateway (WAF), mTLS \\
+\textbf{Security} & OPA, Azure Policy, CyberArk, OAuth2, Secret Management \\
+\end{tabularx}
+\end{center}
 
 \end{document}
