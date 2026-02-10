@@ -3,22 +3,23 @@
 % --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}         % Matches Arial
+\usepackage{helvet}         
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{setspace}       
-\setstretch{1.5}            % 1.5 Line Spacing
+\setstretch{1.4}            % Optimized for a clean, professional look
 
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{fontawesome5}
+\usepackage{tabularx}
 
 % --- Stable 10.5pt Font Size Setup ---
 \makeatletter
 \renewcommand\normalsize{%
-   \@setfontsize\normalsize{10.5pt}{13pt}% % Font size 10.5, Leading 13
+   \@setfontsize\normalsize{10.5pt}{13pt}%
    \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
    \abovedisplayshortskip \z@ \@plus3\p@
    \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
@@ -47,7 +48,7 @@
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway (WAF).
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Specialist in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio, and Azure Edge Networking. Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime and implementing rigorous FinOps strategies.
 
 \section{Core Competencies}
 \begin{multicols}{2}
@@ -89,6 +90,23 @@ Strategic Platform Engineering Leader with 10 years of experience architecting r
     \item Migrated on-premise VMWare workloads to AWS and improved SQL Server redundancy using Always On Availability Groups.
     \item Defined and executed global Docker containerization strategy ensuring application portability.
 \end{itemize}
+
+\section{Technical Skills Matrix}
+\begin{center}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Category} & \textbf{Tools \& Technologies} \\
+\hline
+\textbf{Cloud} & Azure (AKS, Hub-Spoke, Key-vault), AWS (EKS, VPC, Lambda), GCP (GKE) \\
+\hline
+\textbf{IaC / CI-CD} & Terraform, Ansible, Helm, Jenkins, Azure DevOps, GitHub Actions \\
+\hline
+\textbf{Security} & mTLS, OAuth2, CyberArk, Azure Policy, Secret Management, WAF \\
+\hline
+\textbf{Observability} & Prometheus, Grafana, Dynatrace, Splunk, ELK Stack \\
+\hline
+\end{tabularx}
+\end{center}
 
 \section{Education}
 \textbf{Master of Science in IT Management} \hfill New York, USA \\
