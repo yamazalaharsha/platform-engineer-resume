@@ -1,59 +1,65 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.6in]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
 
-% Custom section formatting
+% --- Formatting Rules ---
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\setlist[itemize]{leftmargin=0.15in, nosep, topsep=2pt}
 
 \begin{document}
 
-% Header Section
+% --- Header ---
 \begin{center}
     {\Huge \textbf{Harsha Yamazala}} \\
-    \vspace{2pt}
+    \vspace{4pt}
     \small Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
     \href{https://github.com/yamazalaharsha}{github.com/yamazalaharsha} $|$ Platform (DevOps) Engineer
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking[cite: 73, 117]. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway[cite: 74, 118].
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions[cite: 72, 116]. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking[cite: 73, 117]. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway[cite: 74, 118].
 
 \section{Elite Certifications}
-\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=0pt]
-    \item Certified Kubernetes Administrator (CKA) $|$ AWS Solutions Architect -- Professional [cite: 85, 86, 120]
-    \item Microsoft Certified: DevOps Engineer Expert $|$ Google Professional Cloud Architect [cite: 87, 88, 120]
-    \item HashiCorp Certified: Terraform Associate [cite: 89, 120]
+\begin{itemize}
+    \item \textbf{CKA:} Certified Kubernetes Administrator [cite: 85, 120]
+    \item \textbf{AWS:} Solutions Architect -- Professional [cite: 86, 120]
+    \item \textbf{Microsoft:} Certified DevOps Engineer Expert [cite: 87, 120]
+    \item \textbf{GCP:} Professional Cloud Architect [cite: 88, 120]
+    \item \textbf{Terraform:} HashiCorp Certified Associate [cite: 89, 120]
 \end{itemize}
 
 \section{Professional Experience}
+
 \textbf{Lloyds Banking Group} \hfill \textbf{2019 -- Present} \\
-\textit{Platform (DevOps) Engineer} \hfill London, UK
-\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=2pt, parsep=0pt]
+\textit{Platform (DevOps) Engineer} \hfill London, UK [cite: 91, 123, 124]
+\begin{itemize}
     \item Architected a comprehensive Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%[cite: 92, 93, 125].
-    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for a zero-trust networking posture[cite: 95, 126].
+    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust networking[cite: 95, 126].
     \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing[cite: 97, 127].
     \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for 100\% regulatory compliance[cite: 99, 128].
 \end{itemize}
 
-\vspace{5pt}
+\vspace{6pt}
+
 \textbf{Pearson Inc} \hfill \textbf{Mar 2018 -- Feb 2019} \\
-\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
-\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=2pt, parsep=0pt]
+\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India [cite: 100, 129]
+\begin{itemize}
     \item Spearheaded on-premise VMWare migration to AWS and improved SQL Server redundancy using Always On Availability Groups[cite: 102, 103, 130].
     \item Defined and executed global Docker containerization strategy ensuring cross-cloud portability[cite: 104, 131].
 \end{itemize}
 
-\vspace{5pt}
+\vspace{6pt}
+
 \textbf{Charter Communications} \hfill \textbf{Jan 2016 -- Jan 2018} \\
-\textit{DevOps Engineer} \hfill St. Louis, USA
-\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, itemsep=2pt, parsep=0pt]
+\textit{DevOps Engineer} \hfill St. Louis, USA [cite: 106, 132]
+\begin{itemize}
     \item Integrated Terraform with Puppet to automate telecommunications services in OpenStack[cite: 107, 133].
-    \item Optimized server deployment strategies to maintain +99.9\% availability[cite: 108].
+    \item Optimized server deployment strategies to maintain +99.9\% availability for mission-critical portals[cite: 108].
 \end{itemize}
 
 \section{Education}
