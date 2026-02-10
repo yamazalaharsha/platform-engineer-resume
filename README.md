@@ -2,6 +2,8 @@
 
 [![Resume Build](https://github.com/yamazalaharsha/platform-engineer-resume/actions/workflows/build-resume.yml/badge.svg)](https://github.com/yamazalaharsha/platform-engineer-resume/actions)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-harsha437-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/harsha437/)
+
 This repository contains my professional resume, managed as an **Infrastructure-as-Code** project. As a Platform Engineer, I believe in automating everything—including my professional profile.
 
 ## 🚀 The Tech Stack
