@@ -1,69 +1,81 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
+
+% --- Font & Spacing Setup ---
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}         % This provides the Arial/Helvetica look
+\renewcommand{\familydefault}{\sfdefault} % Set default font to Sans Serif (Arial-like)
+\usepackage[margin=0.7in]{geometry}
+\usepackage{setspace}       % Required for line spacing
+\setstretch{1.5}            % Set line & paragraph spacing to 1.5
+
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
 
-% --- Formatting Rules ---
+% --- Remove standard LaTeX font size and set to 10.5pt approx ---
+\usepackage{fontsize}
+\changefontsize[12.5pt]{10.5pt} 
+
+% --- Section Formatting (No Cite References) ---
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{12pt}{6pt}
-\setlist[itemize]{leftmargin=0.15in, nosep, topsep=2pt}
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt, partopsep=0pt}
 
 \begin{document}
 
 % --- Header ---
 \begin{center}
     {\Huge \textbf{Harsha Yamazala}} \\
-    \vspace{4pt}
+    \vspace{2pt}
     \small Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
     \href{https://github.com/yamazalaharsha}{github.com/yamazalaharsha} $|$ Platform (DevOps) Engineer
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions[cite: 72, 116]. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking[cite: 73, 117]. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway[cite: 74, 118].
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway.
 
 \section{Elite Certifications}
 \begin{itemize}
-    \item \textbf{CKA:} Certified Kubernetes Administrator [cite: 85, 120]
-    \item \textbf{AWS:} Solutions Architect -- Professional [cite: 86, 120]
-    \item \textbf{Microsoft:} Certified DevOps Engineer Expert [cite: 87, 120]
-    \item \textbf{GCP:} Professional Cloud Architect [cite: 88, 120]
-    \item \textbf{Terraform:} HashiCorp Certified Associate [cite: 89, 120]
+    \item Certified Kubernetes Administrator (CKA)
+    \item AWS Solutions Architect -- Professional
+    \item Microsoft Certified: DevOps Engineer Expert
+    \item Google Professional Cloud Architect
+    \item HashiCorp Certified: Terraform Associate
 \end{itemize}
 
 \section{Professional Experience}
 
 \textbf{Lloyds Banking Group} \hfill \textbf{2019 -- Present} \\
-\textit{Platform (DevOps) Engineer} \hfill London, UK [cite: 91, 123, 124]
+\textit{Platform (DevOps) Engineer} \hfill London, UK
 \begin{itemize}
-    \item Architected a comprehensive Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%[cite: 92, 93, 125].
-    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust networking[cite: 95, 126].
-    \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing[cite: 97, 127].
-    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for 100\% regulatory compliance[cite: 99, 128].
+    \item Architected a comprehensive Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
+    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for a zero-trust posture.
+    \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing.
+    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for 100\% regulatory compliance.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{10pt}
 
 \textbf{Pearson Inc} \hfill \textbf{Mar 2018 -- Feb 2019} \\
-\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India [cite: 100, 129]
+\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
 \begin{itemize}
-    \item Spearheaded on-premise VMWare migration to AWS and improved SQL Server redundancy using Always On Availability Groups[cite: 102, 103, 130].
-    \item Defined and executed global Docker containerization strategy ensuring cross-cloud portability[cite: 104, 131].
+    \item Spearheaded on-premise VMWare migration to AWS and improved SQL Server redundancy using Always On Availability Groups.
+    \item Defined and executed global Docker containerization strategy ensuring cross-cloud portability.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{10pt}
 
 \textbf{Charter Communications} \hfill \textbf{Jan 2016 -- Jan 2018} \\
-\textit{DevOps Engineer} \hfill St. Louis, USA [cite: 106, 132]
+\textit{DevOps Engineer} \hfill St. Louis, USA
 \begin{itemize}
-    \item Integrated Terraform with Puppet to automate telecommunications services in OpenStack[cite: 107, 133].
-    \item Optimized server deployment strategies to maintain +99.9\% availability for mission-critical portals[cite: 108].
+    \item Integrated Terraform with Puppet to automate telecommunications services in OpenStack.
+    \item Optimized server deployment strategies to maintain +99.9\% availability for mission-critical portals.
 \end{itemize}
 
 \section{Education}
 \textbf{Master of Science in IT Management} \hfill New York, USA \\
-Marist College [cite: 110, 135]
+Marist College
 
 \end{document}
