@@ -1,115 +1,90 @@
 \documentclass[10pt,a4paper]{article}
 
-% --- Font & Layout Setup ---
+% --- Core Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}         
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{setspace}       
-\setstretch{1.4}            % Optimized for a clean, professional look
-
+\usepackage[margin=0.4in]{geometry}
+\usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{titlesec}
-\usepackage{multicol}
 \usepackage{fontawesome5}
-\usepackage{tabularx}
 
-% --- Stable 10.5pt Font Size Setup ---
-\makeatletter
-\renewcommand\normalsize{%
-   \@setfontsize\normalsize{10.5pt}{13pt}%
-   \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
-   \abovedisplayshortskip \z@ \@plus3\p@
-   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
-   \belowdisplayskip \abovedisplayskip
-   \let\@listi\@listI}
-\normalsize
-\makeatother
-
-% --- Section Formatting ---
-\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{4pt}
-\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt}
+% --- Color & Spacing ---
+\definecolor{sidebarcolor}{HTML}{F0F0F0}
+\setlist[itemize]{leftmargin=0.15in, nosep, topsep=2pt}
 
 \begin{document}
 
-% --- Header ---
+% --- Header Area ---
 \begin{center}
     {\Huge \textbf{HARSHA YAMAZALA}} \\
     \vspace{2pt}
-    \textbf{Senior Platform Engineer | Cloud Architect | CKA \& AWS Professional} \\
-    \vspace{2pt}
-    \small 
-    Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{\faEnvelope \ hyamazala@gmail.com} \\
-    \href{https://github.com/yamazalaharsha}{\faGithub \ github.com/yamazalaharsha} $|$ 
-    \href{https://www.linkedin.com/in/harsha437/}{\faLinkedin \ linkedin.com/in/harsha437}
+    \textbf{Senior Platform Engineer | CKA | AWS Solutions Architect Professional}
 \end{center}
 
-\section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Specialist in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio, and Azure Edge Networking. Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime and implementing rigorous FinOps strategies.
+\vspace{10pt}
 
-\section{Core Competencies}
-\begin{multicols}{2}
-\begin{itemize}
-    \item Networking: Azure App Gateway, APIM, Istio
-    \item Cloud: Azure (AKS, Hub-Spoke), AWS (EKS)
-    \item IaC: Terraform (Modules), Ansible, Helm
-    \item Orchestration: Kubernetes (CKA), Docker, GitOps
-    \item Security: mTLS, OAuth2, Azure Policy
-    \item Observability: Dynatrace, Splunk, Prometheus
-\end{itemize}
-\end{multicols}
+% --- Sidebar Column (Left) ---
+\begin{minipage}[t]{0.3\textwidth}
+    \raggedright
+    \section*{Contact}
+    \small
+    \faPhone \ +44 7417433417 \\
+    \faEnvelope \ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
+    \faMapMarker \ Reading, UK \\
+    \faLinkedin \ \href{https://www.linkedin.com/in/harsha437/}{harsha437} \\
+    \faGithub \ \href{https://github.com/yamazalaharsha}{yamazalaharsha}
 
-\section{Elite Certifications}
-\begin{itemize}
-    \item Certified Kubernetes Administrator (CKA)
-    \item AWS Certified Solutions Architect – Professional
-    \item Microsoft Certified: DevOps Engineer Expert
-    \item Google Cloud Certified: Professional Cloud Architect
-    \item HashiCorp Certified: Terraform Associate
-\end{itemize}
+    \section*{Elite Skills}
+    \textbf{Cloud:} Azure, AWS, GCP \\
+    \textbf{Containers:} AKS, EKS, Docker \\
+    \textbf{IaC:} Terraform, Ansible, Helm \\
+    \textbf{Networking:} Istio, APIM, WAF \\
+    \textbf{Security:} mTLS, CyberArk, OPA
 
-\section{Professional Experience}
+    \section*{Education}
+    \textbf{MS in IT Management} \\
+    Marist College, NY \\
+    \textit{Dec 2015}
+\end{minipage}
+\hfill
+% --- Main Column (Right) ---
+\begin{minipage}[t]{0.65\textwidth}
+    \section*{Professional Summary}
+    \small Senior Platform Engineer with 10 years of experience. Expert in building Internal Developer Platforms (IDP) and securing cloud-native ecosystems for Tier-1 financial institutions like Lloyds and Western Union.
 
-\textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
-\textit{Platform (DevOps) Engineer} \hfill London, UK
-\begin{itemize}
-    \item Architected an Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
-    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust posture.
-    \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing.
-    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for regulatory compliance.
-\end{itemize}
+    \section*{Experience}
+    \textbf{Lloyds Banking Group} \hfill \textbf{2019 -- Present} \\
+    \textit{Platform (DevOps) Engineer}
+    \begin{itemize}
+        \item Architected IDP on AKS using Terraform/Helm.
+        \item Engineered Zero-Trust mTLS with Istio.
+        \item Reduced cloud spend by 30\% via FinOps.
+    \end{itemize}
 
-\vspace{5pt}
+    \vspace{8pt}
+    \textbf{Western Union} \hfill \textbf{Feb 2019 -- 2019} \\
+    \textit{DevOps Engineer}
+    \begin{itemize}
+        \item Integrated CyberArk/CallSign for security.
+        \item Managed global digital banking migrations.
+    \end{itemize}
 
-\textbf{PEARSON INC} \hfill \textbf{Mar 2018 -- Feb 2019} \\
-\textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
-\begin{itemize}
-    \item Migrated on-premise VMWare workloads to AWS and improved SQL Server redundancy using Always On Availability Groups.
-    \item Defined and executed global Docker containerization strategy ensuring application portability.
-\end{itemize}
+    \vspace{8pt}
+    \textbf{Pearson Inc} \hfill \textbf{2018 -- 2019} \\
+    \textit{Infrastructure Developer}
+    \begin{itemize}
+        \item Spearheaded VMWare to AWS migration.
+    \end{itemize}
 
-\section{Technical Skills Matrix}
-\begin{center}
-\begin{tabularx}{\textwidth}{|l|X|}
-\hline
-\textbf{Category} & \textbf{Tools \& Technologies} \\
-\hline
-\textbf{Cloud} & Azure (AKS, Hub-Spoke, Key-vault), AWS (EKS, VPC, Lambda), GCP (GKE) \\
-\hline
-\textbf{IaC / CI-CD} & Terraform, Ansible, Helm, Jenkins, Azure DevOps, GitHub Actions \\
-\hline
-\textbf{Security} & mTLS, OAuth2, CyberArk, Azure Policy, Secret Management, WAF \\
-\hline
-\textbf{Observability} & Prometheus, Grafana, Dynatrace, Splunk, ELK Stack \\
-\hline
-\end{tabularx}
-\end{center}
-
-\section{Education}
-\textbf{Master of Science in IT Management} \hfill New York, USA \\
-Marist College
+    \vspace{8pt}
+    \textbf{CSC India Pvt Ltd} \hfill \textbf{2011 -- 2012} \\
+    \textit{Network Specialist}
+    \begin{itemize}
+        \item Managed Bluecoat proxy servers for UK/EU.
+    \end{itemize}
+\end{minipage}
 
 \end{document}
