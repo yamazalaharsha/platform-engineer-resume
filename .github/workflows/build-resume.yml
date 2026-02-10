@@ -9,25 +9,18 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # This allows the action to create the release
+      contents: write  # This allows the action to upload the PDF to your Releases
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
+      
       - name: Compile LaTeX Resume
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex  # Ensure your filename matches this
-
-      - name: Upload PDF Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-pdf
-          path: resume.pdf
-
+          root_file: resume.tex
+      
       - name: Release Updated Resume
-        if: github.event_name == 'push'
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: resume.pdf
           tag_name: latest
