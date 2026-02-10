@@ -3,20 +3,19 @@
 % --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
+\usepackage{helvet}         
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{setspace}       
-\setstretch{1.4} 
+\setstretch{1.4}            
 
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{multicol}
 \usepackage{fontawesome5}
 \usepackage{tabularx}
 
-% --- Stable 10.5pt Font Size ---
+% --- Stable 10.5pt Font Size Setup ---
 \makeatletter
 \renewcommand\normalsize{%
    \@setfontsize\normalsize{10.5pt}{13pt}%
@@ -46,10 +45,10 @@
 \end{center}
 
 \section{Executive Summary}
-Senior Platform Engineer with 10+ years of experience architecting resilient, cloud-native Internal Developer Platforms (IDP) for Tier-1 financial institutions. Specialist in AKS and Azure DevOps, focusing on self-service ``Golden Path'' automation that reduces developer cognitive load by up to 50\%. Expert in embedding DevSecOps (Aqua, SAST/DAST) and GreenOps frameworks to align with 2026 regulatory and sustainability standards.
+Senior Platform Engineer with 10+ years of experience architecting resilient, cloud-native Internal Developer Platforms (IDP) for Tier-1 financial institutions. Specialist in AKS and Azure DevOps, focusing on self-service ``Golden Path'' automation. Expert in embedding DevSecOps (Aqua, SAST/DAST) and GreenOps frameworks to meet 2026 regulatory standards.
 
 \section{Core Competencies}
-\begin{itemize}[label=\textbullet, leftmargin=0.2in, itemsep=2pt]
+\begin{itemize}[label=\textbullet, leftmargin=0.2in, itemsep=3pt]
     \item \textbf{Networking \& Connectivity:} Azure Application Gateway (WAF v2), Azure APIM, Istio Service Mesh, Checkpoint Firewalls, F5 Load Balancers, Atmos VPN.
     \item \textbf{Cloud Architecture:} Microsoft Azure (AKS, Azure Landing Zones, Hub-Spoke), Microsoft Entra ID (IAM/RBAC), Azure Key Vault.
     \item \textbf{Infrastructure as Code (IaC):} Terraform (Modular \& State Management), Azure Bicep, Ansible, Helm.
@@ -57,44 +56,34 @@ Senior Platform Engineer with 10+ years of experience architecting resilient, cl
     \item \textbf{Security \& DevSecOps:} Zero-Trust Architecture (mTLS), SAST/DAST Ingestion, Aqua Container Security, Azure Policy (Compliance-as-Code), CyberArk.
     \item \textbf{Observability \& Metrics:} Dynatrace, Splunk, Prometheus, Grafana, ELK Stack, KEDA (Scale-to-Zero).
 \end{itemize}
-\end{multicols}
+
+\section{Elite Certifications}
+\begin{itemize}
+    \item Certified Kubernetes Administrator (CKA)
+    \item AWS Certified Solutions Architect – Professional
+    \item Microsoft Certified: DevOps Engineer Expert
+    \item Google Cloud Certified: Professional Cloud Architect
+    \item HashiCorp Certified: Terraform Associate
+\end{itemize}
 
 \section{Professional Experience}
 
 \textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
 \textit{Senior Platform Engineer} \hfill London, UK
 \begin{itemize}
-    \item \textbf{IDP \& Golden Paths:} Engineered self-service automation using Terraform and Azure DevOps, provisioning 80\% of infrastructure automatically and reducing developer friction.
-    \item \textbf{Zero-Trust Networking:} Orchestrated secure ingress via Checkpoint firewalls and Istio mTLS, maintaining 100\% compliance with 2026 financial regulations.
-    \item \textbf{FinOps \& GreenOps:} Achieved a 30\% reduction in cloud waste by implementing KEDA-based scale-to-zero configurations and proactive rightsizing of Docker clusters.
-    \item \textbf{Security Ingestion:} Integrated Aqua Container Security and automated SAST/DAST gating into CI/CD pipelines to mitigate critical vulnerabilities.
+    \item \textbf{IDP \& Golden Paths:} Engineered self-service automation using Terraform and Azure DevOps, reducing developer friction and cognitive load by 50\%.
+    \item \textbf{Zero-Trust Networking:} Orchestrated secure ingress via Checkpoint firewalls and Istio mTLS, maintaining 100\% compliance with financial regulations.
+    \item \textbf{FinOps \& GreenOps:} Achieved a 30\% reduction in cloud waste by implementing KEDA-based scale-to-zero configurations and proactive rightsizing.
 \end{itemize}
 
 \vspace{5pt}
 
 \textbf{PEARSON INC} \hfill \textbf{2018 -- 2019} \\
-\textit{Senior Infrastructure Developer (DevOps)} \hfill Chennai, India
+\textit{Senior Infrastructure Developer} \hfill Chennai, India
 \begin{itemize}
-    \item \textbf{Cloud Migration:} Led the migration of VMWare workloads to AWS, implementing SQL Server Always On Availability Groups for high-resilience database performance.
+    \item \textbf{Cloud Migration:} Led the migration of VMWare workloads to AWS, implementing SQL Server Always On Availability Groups.
     \item \textbf{Containerization:} Defined global Docker strategy, ensuring portability across hybrid environments.
 \end{itemize}
-
-\section{Technical Skills Matrix}
-\begin{center}
-\begin{tabularx}{\textwidth}{|l|X|}
-\hline
-\textbf{Category} & \textbf{Tools \& Technologies} \\
-\hline
-\textbf{Platforms} & AKS, EKS, GKE, OpenStack, Docker, Unix/Linux \\
-\hline
-\textbf{CI/CD/IaC} & Terraform, Bicep, Ansible, Helm, GitHub Actions, Azure Pipelines \\
-\hline
-\textbf{Security} & Aqua, Checkpoint, F5, mTLS, Azure Policy, CyberArk, Key Vault \\
-\hline
-\textbf{Observability} & Dynatrace, Splunk, Prometheus, Grafana, ELK Stack \\
-\hline
-\end{tabularx}
-\end{center}
 
 \section{Education}
 \textbf{Master of Science in IT Management} \hfill New York, USA \\
