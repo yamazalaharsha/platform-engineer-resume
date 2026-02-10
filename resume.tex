@@ -1,73 +1,87 @@
 \documentclass[10pt,a4paper]{article}
 
-% --- Font & Spacing Setup ---
+% --- Font & Layout Setup ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}         % This provides the Arial/Helvetica look
-\renewcommand{\familydefault}{\sfdefault} % Set default font to Sans Serif (Arial-like)
-\usepackage[margin=0.7in]{geometry}
-\usepackage{setspace}       % Required for line spacing
-\setstretch{1.5}            % Set line & paragraph spacing to 1.5
+\usepackage{helvet}         % Matches Arial/Helvetica
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{setspace}       
+\setstretch{1.5}            % Exact 1.5 line spacing from your doc
 
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{xcolor}
+\usepackage{multicol}       % For the Core Competencies columns
 
-% --- Remove standard LaTeX font size and set to 10.5pt approx ---
+% --- Exact Font Size ---
 \usepackage{fontsize}
-\changefontsize[12.5pt]{10.5pt} 
+\changefontsize[13pt]{10.5pt} 
 
-% --- Section Formatting (No Cite References) ---
+% --- Section Formatting ---
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{5pt}
-\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt, partopsep=0pt}
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt}
 
 \begin{document}
 
 % --- Header ---
 \begin{center}
-    {\Huge \textbf{Harsha Yamazala}} \\
+    {\Huge \textbf{HARSHA YAMAZALA}} \\
     \vspace{2pt}
-    \small Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
-    \href{https://github.com/yamazalaharsha}{github.com/yamazalaharsha} $|$ Platform (DevOps) Engineer
+    \small Platform (DevOps) Engineer | Cloud Architect | CKA \& AWS Professional \\
+    Reading, UK $|$ +44 7417433417 $|$ \href{mailto:hyamazala@gmail.com}{hyamazala@gmail.com} \\
+    \href{https://github.com/yamazalaharsha}{github.com/yamazalaharsha}
 \end{center}
 
 \section{Executive Summary}
-Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway.
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native ecosystems for Tier-1 financial institutions. Expert in building Internal Developer Platforms (IDP) using Kubernetes (CKA), Istio Service Mesh, and Azure Edge Networking. Specialist in securing enterprise-scale APIs through Azure APIM and orchestrating sophisticated traffic ingress via Application Gateway (WAF). Proven track record in orchestrating multi-cloud migrations while maintaining +99.9\% uptime and implementing rigorous FinOps strategies.
+
+\section{Core Competencies}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Networking \& Ingress: Azure App Gateway, APIM, Istio
+    \item Cloud: Azure (AKS, Hub-Spoke), AWS (EKS), GCP
+    \item IaC: Terraform (Modules), Ansible, Helm
+    \item Orchestration: Kubernetes (CKA), Docker, GitOps
+    \item Security: mTLS, OAuth2, Azure Policy, CyberArk
+    \item Observability: Dynatrace, Splunk, Prometheus, ELK
+\end{itemize}
+\end{multicols}
 
 \section{Elite Certifications}
 \begin{itemize}
     \item Certified Kubernetes Administrator (CKA)
-    \item AWS Solutions Architect -- Professional
+    \item AWS Certified Solutions Architect – Professional
     \item Microsoft Certified: DevOps Engineer Expert
-    \item Google Professional Cloud Architect
+    \item Google Cloud Certified: Professional Cloud Architect
     \item HashiCorp Certified: Terraform Associate
 \end{itemize}
 
 \section{Professional Experience}
 
-\textbf{Lloyds Banking Group} \hfill \textbf{2019 -- Present} \\
+\textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
 \textit{Platform (DevOps) Engineer} \hfill London, UK
 \begin{itemize}
-    \item Architected a comprehensive Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
-    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for a zero-trust posture.
+    \item Architected an Internal Developer Platform (IDP) on AKS using Helm and Terraform, reducing environment setup time by 50\%.
+    \item Engineered traffic management using Azure Application Gateway (WAF v2) and Istio Service Mesh to implement mTLS for zero-trust posture.
     \item Reduced monthly cloud spend by 30\% through Azure Spot Instances and Kubecost rightsizing.
-    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code'' for 100\% regulatory compliance.
+    \item Implemented Azure Policy and OPA gatekeepers as ``Policy-as-Code,'' ensuring 100\% regulatory compliance.
 \end{itemize}
 
-\vspace{10pt}
+\vspace{5pt}
 
-\textbf{Pearson Inc} \hfill \textbf{Mar 2018 -- Feb 2019} \\
+\textbf{PEARSON INC} \hfill \textbf{Mar 2018 -- Feb 2019} \\
 \textit{Infrastructure Developer (DevOps)} \hfill Chennai, India
 \begin{itemize}
-    \item Spearheaded on-premise VMWare migration to AWS and improved SQL Server redundancy using Always On Availability Groups.
-    \item Defined and executed global Docker containerization strategy ensuring cross-cloud portability.
+    \item Migrated on-premise VMWare workloads to AWS and improved SQL Server redundancy using Always On Availability Groups.
+    \item Defined and executed global Docker containerization strategy ensuring application portability.
 \end{itemize}
 
-\vspace{10pt}
+\vspace{5pt}
 
-\textbf{Charter Communications} \hfill \textbf{Jan 2016 -- Jan 2018} \\
+\textbf{CHARTER COMMUNICATIONS} \hfill \textbf{Jan 2016 -- Jan 2018} \\
 \textit{DevOps Engineer} \hfill St. Louis, USA
 \begin{itemize}
     \item Integrated Terraform with Puppet to automate telecommunications services in OpenStack.
