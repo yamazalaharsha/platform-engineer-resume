@@ -5,9 +5,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{helvet}         
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.45in]{geometry} % Slightly tighter margins for more detail
 \usepackage{setspace}       
-\setstretch{1.4}            
+\setstretch{1.25}            % Adjusted for high-density information
 
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -18,8 +18,8 @@
 % --- Stable 10.5pt Font Size Setup ---
 \makeatletter
 \renewcommand\normalsize{%
-   \@setfontsize\normalsize{10.5pt}{13pt}%
-   \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+   \@setfontsize\normalsize{10.5pt}{12.5pt}%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus4\p@
    \belowdisplayskip \abovedisplayskip
    \let\@listi\@listI}
 \normalsize
@@ -27,8 +27,8 @@
 
 % --- Section Formatting ---
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{4pt}
-\setlist[itemize]{leftmargin=0.2in, nosep, topsep=0pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{leftmargin=0.15in, nosep, topsep=1pt, partopsep=0pt}
 
 \begin{document}
 
@@ -45,44 +45,63 @@
 \end{center}
 
 \section{Executive Summary}
-Senior Platform Engineer with 10+ years of experience architecting resilient, cloud-native Internal Developer Platforms (IDP) for Tier-1 financial institutions. Specialist in AKS and Azure DevOps, focusing on self-service ``Golden Path'' automation. Expert in embedding DevSecOps (Aqua, SAST/DAST) and GreenOps frameworks to meet 2026 regulatory standards.
+Strategic Platform Engineering Leader with 10 years of experience architecting resilient, cloud-native Internal Developer Platforms (IDP) for Tier-1 financial institutions. Specialist in AKS and Azure DevOps, focusing on self-service ``Golden Path'' automation. Expert in embedding Zero-Trust networking and DevSecOps frameworks to meet strict regulatory standards while driving FinOps efficiency.
 
 \section{Core Competencies}
-\begin{itemize}[label=\textbullet, leftmargin=0.2in, itemsep=3pt]
-    \item \textbf{Networking \& Connectivity:} Azure Application Gateway (WAF v2), Azure APIM, Istio Service Mesh, Checkpoint Firewalls, F5 Load Balancers, Atmos VPN.
-    \item \textbf{Cloud Architecture:} Microsoft Azure (AKS, Azure Landing Zones, Hub-Spoke), Microsoft Entra ID (IAM/RBAC), Azure Key Vault.
-    \item \textbf{Infrastructure as Code (IaC):} Terraform (Modular \& State Management), Azure Bicep, Ansible, Helm.
-    \item \textbf{Orchestration \& Automation:} Kubernetes (CKA), Docker, Azure Pipelines, GitHub Actions, GitOps (ArgoCD/Flux).
-    \item \textbf{Security \& DevSecOps:} Zero-Trust Architecture (mTLS), SAST/DAST Ingestion, Aqua Container Security, Azure Policy (Compliance-as-Code), CyberArk.
-    \item \textbf{Observability \& Metrics:} Dynatrace, Splunk, Prometheus, Grafana, ELK Stack, KEDA (Scale-to-Zero).
-\end{itemize}
-
-\section{Elite Certifications}
-\begin{itemize}
-    \item Certified Kubernetes Administrator (CKA)
-    \item AWS Certified Solutions Architect – Professional
-    \item Microsoft Certified: DevOps Engineer Expert
-    \item Google Cloud Certified: Professional Cloud Architect
-    \item HashiCorp Certified: Terraform Associate
+\begin{itemize}[label=\textbullet, itemsep=1pt]
+    \item \textbf{Networking \& Ingress:} Azure App Gateway (WAF v2), APIM, Istio Service Mesh, Atmos VPN, F5, Checkpoint.
+    \item \textbf{Cloud Architecture:} Microsoft Azure (AKS, Landing Zones, Hub-Spoke), Entra ID, Workload Identities.
+    \item \textbf{Infrastructure as Code:} Terraform (Modular Design), Azure Bicep, Ansible, Helm, GitOps.
+    \item \textbf{Security \& Compliance:} Zero-Trust (mTLS), SAST/DAST, Aqua Security, Azure Policy, CyberArk.
+    \item \textbf{Observability \& FinOps:} Dynatrace, Azure Monitor, KEDA (Scale-to-Zero), Kubecost, GreenOps.
 \end{itemize}
 
 \section{Professional Experience}
 
 \textbf{LLOYDS BANKING GROUP} \hfill \textbf{2019 -- Present} \\
-\textit{Senior Platform Engineer} \hfill London, UK
+\textit{Platform (DevOps) Engineer} \hfill London, UK
+
+\textit{Infrastructure Provisioning \& Pipeline Strategy}
 \begin{itemize}
-    \item \textbf{IDP \& Golden Paths:} Engineered self-service automation using Terraform and Azure DevOps, reducing developer friction and cognitive load by 50\%.
-    \item \textbf{Zero-Trust Networking:} Orchestrated secure ingress via Checkpoint firewalls and Istio mTLS, maintaining 100\% compliance with financial regulations.
-    \item \textbf{FinOps \& GreenOps:} Achieved a 30\% reduction in cloud waste by implementing KEDA-based scale-to-zero configurations and proactive rightsizing.
+    \item Standardized provisioning via modular Terraform and GitOps, ensuring 80\% of Mortgages' Azure resources utilize repeatable ``Golden Path'' templates.
+    \item Established secure state management using Azure Storage backends with mandatory locking, preventing configuration drift across multi-team deployments.
 \end{itemize}
 
-\vspace{5pt}
+\textit{Security by Design \& Zero-Trust}
+\begin{itemize}
+    \item Engineered Zero-Trust environments using Istio mTLS and identity-first security through Microsoft Entra ID and Workload Identities.
+    \item Embedded automated SAST/DAST and Aqua scanning into self-service pipelines, achieving 100\% regulatory compliance for mortgage applications.
+\end{itemize}
 
-\textbf{PEARSON INC} \hfill \textbf{2018 -- 2019} \\
+\textit{Networking, Subnets \& Connectivity}
+\begin{itemize}
+    \item Designed scalable Hub-and-Spoke architectures with VNET peering and UDRs to isolate application tiers.
+    \item Orchestrated network rules for Atmos VPN and F5 load balancers to enable secure, low-latency access for distributed teams.
+    \item Collaborated with firewall teams on Checkpoint configurations to ensure 100\% adherence to bank-wide security policies.
+\end{itemize}
+
+\textit{Kubernetes (AKS) \& FinOps}
+\begin{itemize}
+    \item Orchestrated high-availability AKS clusters, driving 30\% waste reduction via KEDA scale-to-zero and rightsizing underutilized clusters.
+    \item Integrated quality gates and full-stack observability (Dynatrace), reducing change failure rates to under 15\%.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{PEARSON INC} \hfill \textbf{Mar 2018 -- Feb 2019} \\
 \textit{Senior Infrastructure Developer} \hfill Chennai, India
 \begin{itemize}
-    \item \textbf{Cloud Migration:} Led the migration of VMWare workloads to AWS, implementing SQL Server Always On Availability Groups.
-    \item \textbf{Containerization:} Defined global Docker strategy, ensuring portability across hybrid environments.
+    \item Migrated on-premise VMWare workloads to AWS and spearheaded SQL Server Always On Availability Groups.
+    \item Executed global Docker containerization strategy ensuring portability and strict security baselines.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{CHARTER COMMUNICATIONS} \hfill \textbf{Jan 2016 -- Jan 2018} \\
+\textit{DevOps Engineer} \hfill St. Louis, USA
+\begin{itemize}
+    \item Integrated Terraform with Puppet to automate telecommunications services in an OpenStack environment.
+    \item Optimized server deployment strategies to maintain +99.9\% availability for customer-facing portals.
 \end{itemize}
 
 \section{Education}
